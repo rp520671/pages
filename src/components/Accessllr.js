@@ -14,6 +14,10 @@ import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Echo from './Echo';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from "react-bootstrap/Button";
+import { Col, Row } from 'react-bootstrap';
+
 
 const Accessllr = () => {
     const [App, setApp] = React.useState('');
@@ -51,7 +55,7 @@ const Accessllr = () => {
         <TextField id="Name" label="AccessLevelName" variant="standard" />
         <TextField id="Description" label="AccessLevelDescription" variant="standard" />
 
-        <FormControl variant="standard" sx={{ m: 1, minWidth: 20 }}>
+        <FormControl variant="standard" sx={{ m: 1, minWidth: 10}}>
         <InputLabel id="demo-simple-select-standard-label">App</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
@@ -73,7 +77,17 @@ const Accessllr = () => {
           label="Active"
           labelPlacement="end"
         />
-        <button size ="sm">Save</button>
+        <Container>
+          <Row>
+            <Col>
+            <Button size="sm" variant="primary"> Save</Button></Col>
+        <Col>
+        <Button size="sm" variant="primary">Small</Button></Col>
+     
+      </Row>
+
+        </Container>
+
       </FormControl>
     </Box> 
  </AccordionDetails>

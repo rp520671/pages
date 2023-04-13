@@ -15,13 +15,6 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Echo from './Echo';
 
-
-
-
-
- 
-
-
 const Accessllr = () => {
     const [App, setApp] = React.useState('');
 
@@ -58,7 +51,7 @@ const Accessllr = () => {
         <TextField id="Name" label="AccessLevelName" variant="standard" />
         <TextField id="Description" label="AccessLevelDescription" variant="standard" />
 
-        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+        <FormControl variant="standard" sx={{ m: 1, minWidth: 20 }}>
         <InputLabel id="demo-simple-select-standard-label">App</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
@@ -75,11 +68,12 @@ const Accessllr = () => {
           
         </Select>
         <FormControlLabel
-          value="end"
+          value="Active"
           control={<Checkbox />}
           label="Active"
           labelPlacement="end"
         />
+        <button size ="sm">Save</button>
       </FormControl>
     </Box> 
  </AccordionDetails>
@@ -89,10 +83,9 @@ const Accessllr = () => {
       
       
        </div>     
-       
-          </Paper>
-          </Box>
-          </Container>
+</Paper>
+</Box>
+</Container>
         
      
   )

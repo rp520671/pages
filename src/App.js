@@ -1,12 +1,13 @@
 import './App.css';
-import MiniDrawer from './components/Navbar';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
     <div>
-      <MiniDrawer/>
+      <Navbar/>
       
     </div>
     

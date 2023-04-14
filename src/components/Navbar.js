@@ -9,7 +9,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -19,6 +18,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import Image from 'mui-image'
 import Accessllr from './Accessllr';
 import './index.css'
+import SearchBar from './Search';
+import MenuItem from '@mui/material/MenuItem';
+
 
 
 
@@ -102,7 +104,7 @@ export default function Navbar() {
   };
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', flexGrow:1 }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar>
@@ -111,16 +113,27 @@ export default function Navbar() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{
-              marginRight: 5,
-              ...(open && { display: 'none' }),
-            }}
+            sx={{ mr: 2 ,...(open),}}
+           
           >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
+             <Typography variant="h6" noWrap component="div" >
             Teravista.io
           </Typography>
+            
+          </IconButton>
+          
+          <Typography variant="overline" noWrap component="div" >
+            Application Console
+          </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+      
+         
+          
+          <MenuItem>
+            <SearchBar/>
+            </MenuItem>
+
+
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>

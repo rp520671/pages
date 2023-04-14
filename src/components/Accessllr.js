@@ -15,6 +15,7 @@ import { InputLabel,FormControl } from '@mui/material';
 import Button from "react-bootstrap/Button";
 import Stack from "react-bootstrap/Stack";
 import { Save2, XSquareFill, CardChecklist } from 'react-bootstrap-icons';
+import Accordion1 from './Accordion1';
 
 const Accessllr = () => {
     const [App, setApp] = React.useState('');
@@ -24,6 +25,7 @@ const Accessllr = () => {
 };
 
   return (
+    <>
     <Container >
       <Box >
         <Paper elevation={6}>
@@ -68,7 +70,7 @@ const Accessllr = () => {
           <InputLabel id="demo-standard-simple-select-label">App</InputLabel>
         <Select labelId="demo-standard-simple-select-standard-label" id="demo-s imple-select-standard" value={App} onChange={handleChange} label="App">
           <MenuItem value="">
-          <em>None</em>
+          <em>Select app</em>
           </MenuItem>
           <MenuItem value={"FireQube"}>FireQube</MenuItem>
           <MenuItem value={"Laravel"}>Laravel</MenuItem>
@@ -95,13 +97,31 @@ const Accessllr = () => {
       </div>
     </Accordion>
     <Accordion>
+    <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+          >
+            <div>
+            <h4>Data List</h4>
+            <h6>Data of approved data </h6>
+            </div>  
+            
+
+          </AccordionSummary>
+          <div>
+            <Box>
+              <Accordion1/>
+            </Box>
+          </div>
          
 
     </Accordion>
        
    </Paper>
   </Box>
-</Container>  
+</Container> 
+</> 
 
   )
 }
